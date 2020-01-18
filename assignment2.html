@@ -24,7 +24,7 @@
             <p><img src="fade-circuit.png" width=700></a></p>
             <p>This is an image with details regarding how the circuit is assembled. This is easier to see than the gif above.</p>
             <p>The system is essentially two circuits, one which is connected to the pushbutton, and one that is connected to the LED.
-            The LED will remain off until the push button is pressed. Once pressed, it sends a signal "HIGH" to the program, which tells the LED to fade on. It will stay on once pressed.</p>
+            The LED will immediately turn on until the push button is pressed. Once pressed, it sends a signal "HIGH" to the program, which tells the LED to quickly turn off and fade back on. It will stay on once pressed.</p>
           </br>
           </br>
             <strong><p>Schematic and Math:</p></strong>
@@ -41,7 +41,7 @@
           </br>
             <strong><p>Code Snippet:</p></strong>
             <p><img src="fade-snippet.png" width=700></a></p>
-            <p>To satisfy all the conditions of the assignment, I used digitalRead() to read the button associated with the LED as INPUT. The digitalWrite() function will determine the initial state of the LED (which is on). When the button is pressed, the LED will fade from 0 brightness to full brightness using analogWrite(), and repeat until the button is unpressed.</p>
+            <p>To satisfy all the conditions of the assignment, I used digitalRead() to read the button associated with the LED as INPUT. The digitalWrite() function will determine the initial state of the LED (which is on). When the button is pressed, the LED will fade from 0 brightness to full brightness using analogWrite().</p>
           </br>
           </br>
           <a href="index.html"><h2>HOME</h2>
