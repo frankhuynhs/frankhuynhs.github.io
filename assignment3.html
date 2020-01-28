@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Assignment 3: Input Output!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 3: Input Output!</h1>
+            <p>"Create a schematic, circuit, and code that uses a sensor (e.g. either the photoresistor or the thermistor) in a voltage divider to change the state of an LED."
+            <strong><p>Input Output Demo:</p></strong>
+            <p><img src="inputoutput.gif" width=500></a></p>
+            <p>This is a gif showing how the circuit works when assembled.</p>
+            <p><img src="inputoutput-serial.gif" width=500></a></p>
+            <p>This is a gif showing the serial monitor readings display changes in LED brightness</p>
+          </br>
+          </br>
+            <strong><p>Circuit diagram:</p></strong>
+            <p><img src="inputoutput-circuit.jpeg" width=500></a></p>
+            <p>The system is essentially three circuits, one which is connected to the photoresistor, and one for each of the red LEDs.
+            The LEDs will alternate lighting on/off based off of the brightness levels of the environment.</p>
+          </br>
+          </br>
+            <strong><p>Schematic:</p></strong>
+            <p><img src="inputoutput-schematic.jpeg" width=500></a></p>
+            <p>This is a schematic of my circuit. In this circuit, both of the red LEDs are built in parallel through Pin 11 and 10. Both LEDs are connected to their own resistors and then to a common ground. The voltage divider has a photoresistor and a 10k Ohm resistor that is in series with the A0 pin between them.</p>
+            </br>
+            <br/>
+            <strong><p>Resistance Calculations:</p></strong>
+            <p>I used Ohm's Law in order to calculate the resistors for both of the LED circuits</p>
+            <p><img src="inputoutput-resistance.jpeg" width=500></a></p>
+            <p>Considering that the range of resistance can vary for the photoresistor, an additional resistor is needed to prevent short circuiting. While the minimimum resistance needed to prevent the board from frying is 25Ω, I used a 10kΩ resistor just to be safe.</p>
+            <p><img src="inputoutput-voltagedivide.jpeg" width=500></a></p>
+          </br>
+            <strong><p>Code Snippet:</p></strong>
+            <p><img src="inputoutput-snippet.png" width=700></a></p>
+            <p>To satisfy all the conditions of the assignment, I used analogRead() to print the brightness values from the photoresistor and set it into the variable "val". The analogWrite() function will determine which LED will turn on based off the reading. The map function helps re-map a number from one range to another and the if statements determine the conditions to be met for each LED to turn on.</p>
+          </br>
+          </br>
+          <a href="index.html"><h2>HOME</h2>
+        </div>
+
+    </body>
+</html>
