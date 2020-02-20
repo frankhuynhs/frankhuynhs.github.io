@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Assignment 5: Talking to the web!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Assignment 5: Talking to the web!</h1>
+            <p>"Create a webpage with p5.js that interacts with data that’s coming from your arduino over serial. You must use at least two sensors, Serial.print, and p5.js."
+            <strong><p>Higher voltage and transistor demo:</p></strong>
+            <p><img src="talk.gif" width=700></a></p>
+            <p>This is a gif showing how the circuit works when assembled. There are two sets of circles moving across the plane. The higher set of circles move up/down based on the movement of the joystick and the lower set of circles move up/down based on the brightness of the environment from the photoresistor.</p>
+          </br>
+          </br>
+            <strong><p>Circuit diagram:</p></strong>
+            <p><img src="talk-circuit.jpg" width=700></a></p>
+            <p>The system has two parts where they both share 5V power and a common ground but A0 connects to the joystick and A1 connects to a photoresistor to interact with data from the arduino over serial and display it on a web browser via p5.js framework.</p>
+          </br>
+          </br>
+            <strong><p>Schematic:</p></strong>
+            <p><img src="talk-schematic.jpeg" width=500></a></p>
+            <p>This is a schematic of my circuit. Considering that the range of resistance can vary for the photoresistor, an additional resistor is needed to prevent short circuiting and fully ground the circuit.</p>
+            <p> V = IR </p>
+            <p> 5V = 200mA (R) </p>
+            <p> R = 5V/0.2A </p>
+            <p> R = 25Ω </p>
+            <p>While the minimimum resistance needed to prevent the board from frying is 25Ω, I used a 10kΩ resistor just to be safe.</p>
+            <p>In addition, I did map my values from the joystick and photoresistor. I mapped values 0-1023 from the joystick and photoresistor to a range of 0-255 so changes are better translated in the interactive display.</p>
+            </br>
+            <br/>
+
+            <strong><p>Arduino Code Snippet:</p></strong>
+            <p><img src="talk-snippet1.png" width=700></a></p>
+            <p>The snippet above is the code that is programmed into the arduino.</p>
+          </br>
+          </br>
+            <strong><p>Code Snippet:</p></strong>
+            <p><img src="talk-snippet2.png" width=700></a></p>
+            <p>The snippet above is the code that is programmed into the browser to take serial values from the arduino and display them as a graph.</p>
+          </br>
+          </br>
+          <a href="index.html"><h2>HOME</h2>
+        </div>
+
+    </body>
+</html>
