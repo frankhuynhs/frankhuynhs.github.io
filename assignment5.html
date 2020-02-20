@@ -14,7 +14,7 @@
         <div class="header">
             <h1>Assignment 5: Talking to the web!</h1>
             <p>"Create a webpage with p5.js that interacts with data that’s coming from your arduino over serial. You must use at least two sensors, Serial.print, and p5.js."
-            <strong><p>Higher voltage and transistor demo:</p></strong>
+            <strong><p>Talking to the web demo:</p></strong>
             <p><img src="talk.gif" width=700></a></p>
             <p>This is a gif showing how the circuit works when assembled. There are two sets of circles moving across the plane. The higher set of circles move up/down based on the movement of the joystick and the lower set of circles move up/down based on the brightness of the environment from the photoresistor.</p>
           </br>
@@ -24,7 +24,7 @@
             <p>The system has two parts where they both share 5V power and a common ground but A0 connects to the joystick and A1 connects to a photoresistor to interact with data from the arduino over serial and display it on a web browser via p5.js framework.</p>
           </br>
           </br>
-            <strong><p>Schematic:</p></strong>
+            <strong><p>Schematic and Calculations:</p></strong>
             <p><img src="talk-schematic.jpeg" width=500></a></p>
             <p>This is a schematic of my circuit. Considering that the range of resistance can vary for the photoresistor, an additional resistor is needed to prevent short circuiting and fully ground the circuit.</p>
             <p> V = IR </p>
@@ -41,7 +41,7 @@
             <p>The snippet above is the code that is programmed into the arduino.</p>
           </br>
           </br>
-            <strong><p>Code Snippet:</p></strong>
+            <strong><p>Sketch.js Code Snippet:</p></strong>
             <p><img src="talk-snippet2.png" width=700></a></p>
             <p>The snippet above is the code that is programmed into the browser to take serial values from the arduino and display them as a graph.</p>
           </br>
