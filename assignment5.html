@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Assignment 5: Talking to the web!</title> 
+        <title>Assignment 5 & 6: Talking to the web & the web talks back!</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,38 +12,33 @@
     <body> 
 
         <div class="header">
-            <h1>Assignment 5: Talking to the web!</h1>
-            <p>"Create a webpage with p5.js that interacts with data that’s coming from your arduino over serial. You must use at least two sensors, Serial.print, and p5.js."
-            <strong><p>Talking to the web demo:</p></strong>
+            <h1>Assignment 5 & 6: Talking to the web and the web talks back!</h1>
+            <p>"Create a webpage with p5.js that interacts with your arduino. By doing things with your keyboard or mouse, things must change in the real world! Vice versa, by doing things on your arduino, the p5 page must also change. You must use JSON parsing, Serial, and p5.js. Your webpage must be interactive. You must use a minimum of two input devices from the arduino (e.g. the joystick counts as 2 inputs) and a minimum of one output device from the arduino, e.g. an LED."
+            <strong><p>Talking to the web & the web talks back demo:</p></strong>
             <p><img src="talk.gif" width=700></a></p>
-            <p>This is a gif showing how the circuit works when assembled. There are two sets of circles moving across the plane. The higher set of circles move up/down based on the movement of the joystick and the lower set of circles move up/down based on the brightness of the environment from the photoresistor.</p>
+            <p>This is a gif showing how the circuit works when assembled. On the screen there is a line segment that is being pushed or pulled by the movement of the joystick. In addition, the LED strips will turn off/on when pressing the "o" key on the keyboard.</p>
           </br>
           </br>
             <strong><p>Circuit diagram:</p></strong>
-            <p><img src="talk-circuit.jpg" width=700></a></p>
-            <p>The system has two parts where they both share 5V power and a common ground but A0 connects to the joystick and A1 connects to a photoresistor to interact with data from the arduino over serial and display it on a web browser via p5.js framework.</p>
+            <p><img src="talk-circuit.jpeg" width=700></a></p>
+            <p>The system has two parts where they both share a common ground. Pin A0 connects to the x-position of the joystick while pin A1 connects to the y-position of the joystick. The movement of the joystick will interact with data from the arduino over serial and display it on a web browser via p5.js framework, making the line segment push/pull in the direction of the joystick. The LED strip is connected to pin 10 through a 10kΩ resistor and mosfet transistor.</p>
           </br>
           </br>
             <strong><p>Schematic and Calculations:</p></strong>
             <p><img src="talk-schematic.jpeg" width=500></a></p>
-            <p>This is a schematic of my circuit. Considering that the range of resistance can vary for the photoresistor, an additional resistor is needed to prevent short circuiting and fully ground the circuit.</p>
-            <p> V = IR </p>
-            <p> 5V = 200mA (R) </p>
-            <p> R = 5V/0.2A </p>
-            <p> R = 25Ω </p>
-            <p>While the minimimum resistance needed to prevent the board from frying is 25Ω, I used a 10kΩ resistor just to be safe.</p>
-            <p>In addition, I did map my values from the joystick and photoresistor. I mapped values 0-1023 from the joystick and photoresistor to a range of 0-255 so changes are better translated in the interactive display.</p>
+            <p>I chose to use a 10k ohm resistor for my LED strip because it will properly ensure the components are grounded. I want to ensure that the current passing from the drain to source is not above the max current of the transistor, which is 60A, according to the datasheets/class slides. The gate pin won't draw much current due to how the transistor works, so I don't technically need a resistor there, but I wanted to be safe. Other than that, there were no other real calculations.</p>
             </br>
             <br/>
 
             <strong><p>Arduino Code Snippet:</p></strong>
             <p><img src="talk-snippet1.png" width=700></a></p>
-            <p>The snippet above is the code that is programmed into the arduino.</p>
+            <p>The snippet above is the code that is programmed into the arduino to link the joystick and led strip in the circuit. On the serial monitor, movement of the joystick will allow values between 0-1023 for both x and y positions due to analogRead() function.</p>
           </br>
           </br>
             <strong><p>Sketch.js Code Snippet:</p></strong>
             <p><img src="talk-snippet2.png" width=700></a></p>
-            <p>The snippet above is the code that is programmed into the browser to take serial values from the arduino and display them as a graph.</p>
+            <p><img src="talk-snippet3.png" width=700></a></p>
+            <p>The snippet above is the code that is programmed into the browser to take serial values from the arduino and display them on the screen. The code also shows the code to communicate key pressed values to the arduino to change the LED brightness.</p>
           </br>
           </br>
           <a href="index.html"><h2>HOME</h2>
