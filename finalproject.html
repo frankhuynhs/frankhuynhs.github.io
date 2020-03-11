@@ -16,7 +16,7 @@
             <p>"In the final projects, we want to see you integrate different skills you learn throughout the class. Your project needs to take some input and connect that to some output through digital logic. Your projects needs to be integrated into a prototype (so it cannot just be a breadboard on the table!)"
           </br>
           </br>
-            <p>For my final project, I made ana alarm clock using the arduino. The current time and date will be set using the code while alarm can be set using pushbuttons as input. It is connected to the buzzer which acts as the output through digital logic. My prototype is encased in a cardboard box to hide all wiring.</p>
+            <p>For my final project, I made an alarm clock using the arduino. The current time and date will be set using the code while alarm can be set using pushbuttons as input. It is connected to the buzzer which acts as the output through digital logic. My prototype is encased in a cardboard box to hide all wiring.</p>
             <strong><p>Initial sketches of my alarm clock idea</p></strong>
             <p><img src="alarm-sketch.jpeg" width=700></a></p>
             <p>To bring this project together, I used the following list of materials:</p>
@@ -28,12 +28,13 @@
             <p>6. Four pushbuttons</p>
             <p>7. Four 1K ohm resistors</p>
             <p>8. Jumper wires</p>
-            <p>9. Breaboard</p>
+            <p>9. Breadboard</p>
           </br>
           </br>
             <strong><p>Circuit diagram</p></strong>
             <p><img src="alarm-circuit2.jpeg" width=700></a></p>
             <p>The circuit diagram is shown above where the LCD display is connected with the I2C module that connects to ground and power and pins A4 and A5. The real time clock module is connected to pins 2,3, and 4. The pushbuttons (input) are connected to 1k ohm resistors to fully ground the circuit when they are plugged into pins 8-11 on the arduino. The buzzer (output) is connected to pin 6. </p>
+            <p>When in the normal state, the clock will display the time and date. The pushbuttons help set the alarm. Pushbutton 1 (left) will bring the lcd to display the alarm setting mode. Pushbutton 2 (second to left) will adjust the hours (0-23). Pushbutton 3 (second to right) will adjust the minutes (0-59). Pushbutton 4 will exit the alarm state. When time = alarm set, the buzzer will ring.</p>
           </br>
           </br>
             <strong><p>Schematic</p></strong>
