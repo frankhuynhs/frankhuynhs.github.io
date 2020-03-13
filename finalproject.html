@@ -31,17 +31,18 @@
             <p>9. Breadboard</p>
           </br>
           </br>
-            <strong><p>Circuit diagram</p></strong>
-            <p><img src="alarm-circuit2.jpeg" width=700></a></p>
-            <p>The circuit diagram is shown above where the LCD display is connected with the I2C module that connects to ground and power and pins A4 and A5. The real time clock module is connected to pins 2,3, and 4. The pushbuttons (input) are connected to 1k ohm resistors to fully ground the circuit when they are plugged into pins 8-11 on the arduino. The buzzer (output) is connected to pin 6. </p>
-            <p>When in the normal state, the clock will display the time and date. The pushbuttons help set the alarm. Pushbutton 1 (left) will bring the lcd to display the alarm setting mode. Pushbutton 2 (second to left) will adjust the hours (0-23). Pushbutton 3 (second to right) will adjust the minutes (0-59). Pushbutton 4 will exit the alarm state. When time = alarm set, the buzzer will ring.</p>
-          </br>
-          </br>
             <strong><p>Schematic</p></strong>
-            <p><img src="alarm-circuit.png" width=700></a></p>  
-            <p>The circuit diagram connections are shown above, which was made through the fritzing application.</p>
+            <p><img src="alarm-schematic.jpeg" width=700></a></p>  
+            <p>The schematic diagram is shown above where the LCD display is connected with the I2C module that connects to ground and power and pins A4 and A5. The real time clock module is connected to pins 2,3, and 4. The pushbuttons (input) are connected to 1k ohm resistors to fully ground the circuit when they are plugged into pins 8-11 on the arduino. The buzzer (output) is connected to pin 6. </p>
             </br>
             <br/>
+            <strong><p>Circuit diagram</p></strong>
+            <p><img src="alarm-circuit2.jpeg" width=700></a></p>
+            <p>When in the normal state, the clock will display the time and date. The pushbuttons help set the alarm. Pushbutton 1 (left) will bring the lcd to display the alarm setting mode. Pushbutton 2 (second to left) will adjust the hours (0-23). Pushbutton 3 (second to right) will adjust the minutes (0-59). Pushbutton 4 will exit the alarm state. When time = alarm set, the buzzer will ring.</p>
+            <p><img src="alarm-circuit.png" width=700></a></p>  
+            <p>The circuit diagram connections are shown more clearly above, which was made through the fritzing application.</p>
+          </br>
+          </br>
             <strong><p>Alarm Clock Video Demo</p></strong>
             <iframe width="700" height="500" src="https://www.youtube.com/embed/YnKXUAYr1hM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </br>
@@ -51,7 +52,7 @@
             <p><img src="alarm-snippet1.png" width=700></a></p>
             <p><img src="alarm-snippet2.png" width=700></a></p>
             <p><img src="alarm-snippet4.png" width=700></a></p>
-            <p>The snippet above is the code that is programmed into the arduino to utilize the libraries needed for the project (the real time clock library, and lcd library). I used a I2C scanner to find my I2C module device which is reported to my serial monitor. From there, I'm able to update my code to set the LCD address. The current date/time display can be changed through the code and re-running it.</p>
+            <p>The snippet above is the code that is programmed into the arduino to utilize the libraries needed for the project (the real time clock library, and lcd library). I used a I2C scanner to find my I2C module device which is reported to my serial monitor. From there, I'm able to update my code to set the LCD address. The current date/time display can be changed through the code and re-running it. LCD and RTC callouts were references from TechmakerDIY where I was able to make adjustments for lcd displays during different pushbutton states.</p>
           </br>
           </br>
           <a href="index.html"><h2>HOME</h2>
